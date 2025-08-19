@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule created="" id="" language="beanshell" modified="" name="demo rule ">
+  <Source> 
+  //Print all the users of particular application
+  import sailpoint.api.IdentityService;
+  import sailpoint.object.*;
+  import sailpoint.object.Link;
+  import java.util.List;
+  /*
+  List usersList = new ArrayList();  
+  IdentityService identityService = new IdentityService(context);
+
+  List users = context.getObjects(Identity.class);
+  if(users != null){
+    for(Identity user: users){
+      Application app = context.getObject(Application.class,"Teklane LDAP application");
+      List userLinks = identityService.getLinks(user, app);
+      if(userLinks != null){
+        for (Link userLink: userLinks){
+          usersList.add("User: " +user.getName() + "	Application: " + userLink.getApplicationName()); 
+        }
+
+      }
+
+    }
+
+  }
+  return usersList;
+
+
+  //2.Write a rule to get all the active users in sailpoint. Set them inactive.
+
+  Filter filter = Filter.eq("inactive",false);
+  //Filter filter = Filter.eq("status","1");
+  QueryOptions qo = new QueryOptions();
+  qo.addFilter(filter);
+
+
+  List ids= context.getObjects(Identity.class,qo); 
+  List list = new ArrayList();
+
+  for ( Identity i : ids){
+    list.add("active user is " + i.getFullName());
+  }
+  return list;
+
+    */
+
+
+  import sailpoint.object.*;
+  import java.util.List;
+
+  List l = new ArrayList();  
+
+  List ids =context.getObjects(Identity.class);
+  List roles = context.getObjects(Bundle.class); // to get the roles,we use bundle. 
+
+  for( Identity  i : ids){
+    for(Bundle asgnrole : roles){
+      if ( asgnrole.getAssignedRoles() != null){
+        //Idendity idroles = asgnrole.getAssignedRoles();
+        l.add("name of identity is " + i.getFullName() + " and the assigned roles is " + asgnrole.getAssignedRoles());
+        //l.add("name of identity is " + i.getFullName());
+      }
+    }
+  }
+
+  return l;
+
+
+
+  </Source>
+</Rule>

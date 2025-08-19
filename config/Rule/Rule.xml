@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule created="" id="" language="beanshell" modified="" name="Identity First Name Test">
+  <Description>
+    Rule to get the firstname of the Identity in a list
+  </Description>
+  <Source>
+  import sailpoint.object.Identity;
+  Identity user = context.getObjectByName(Identity.class, "Ankita.Fuyal");
+  String name = user.getFirstname();
+  return name;
+  
+  </Source>
+</Rule>

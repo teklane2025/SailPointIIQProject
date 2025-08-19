@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Form PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Form created="" id="" modified="" name="Group Creation Form" type="Workflow">
+  <Attributes>
+    <Map>
+      <entry key="pageTitle" value="Group Creation Form"/>
+    </Map>
+  </Attributes>
+  <Description></Description>
+  <Section name="Form Selection">
+    <Field displayName="Choose any Form" name="selectform" postBack="true" type="string">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>Active Directory Group Management</String>
+            <String>Ldap Group Management</String>
+            <String>Active Directory User Management</String>
+            <String>Ldap User Management</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+  </Section>
+  <Section label="Teklane Group Management (Active Directory)" name="Resource Creation And Maintenance">
+    <Attributes>
+      <Map>
+        <entry key="hidden">
+          <value>
+            <Script>
+              <Source>import sailpoint.tools.Util;
+
+                      if(Util.isNotNullOrEmpty(selectform) &amp;&amp; selectform.equalsIgnoreCase("Active Directory Group Management")){
+                      return false;
+                      }
+                      return true;</Source>
+            </Script>
+          </value>
+        </entry>
+      </Map>
+    </Attributes>
+    <Field displayName="Active Directory Group Creation" name="adGroup" postBack="true" type="string">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>Create AD Group</String>
+            <String>Modify AD Group</String>
+            <String>Delete AD Group</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+  </Section>
+  <Section label="Create Active Directory Group" name="Create Active Directory Group">
+    <Attributes>
+      <Map>
+        <entry key="hidden">
+          <value>
+            <Script>
+              <Source>import sailpoint.tools.Util;
+
+                      if(Util.isNotNullOrEmpty(adGroup) &amp;&amp; adGroup.equalsIgnoreCase("Create AD Group")){
+                      return false;
+                      }
+                      return true;</Source>
+            </Script>
+          </value>
+        </entry>
+      </Map>
+    </Attributes>
+    <Field displayName="Enter Group Name " helpKey="&quot;Note: Name must be 64 characters or less&quot;" name="createGroup" postBack="true" type="string"/>
+    <Field displayName="Application Name" name="appName" type="Application"/>
+    <Field displayName="Enter Samaccount Name for Group" name="sAMAccountName" type="string"/>
+    <Field displayName="Active Directory Group Description" name="description" type="string"/>
+  </Section>
+  <Section label="Teklane Group Management (Ldap)" name="Resource creation">
+    <Attributes>
+      <Map>
+        <entry key="hidden">
+          <value>
+            <Script>
+              <Source>import sailpoint.tools.Util;
+
+                      if(Util.isNotNullOrEmpty(selectform) &amp;&amp; selectform.equalsIgnoreCase("Ldap Group Management")){
+                      return false;
+                      }
+                      return true;</Source>
+            </Script>
+          </value>
+        </entry>
+      </Map>
+    </Attributes>
+    <Field displayName="Ldap Group Creation" name="ldapGroup" postBack="true" type="string">
+      <AllowedValuesDefinition>
+        <Value>
+          <List>
+            <String>Create Ldap Group</String>
+            <String>Modify Ldap Group</String>
+            <String>Delete Ldap Group</String>
+          </List>
+        </Value>
+      </AllowedValuesDefinition>
+    </Field>
+  </Section>
+  <Section label="Create Ldap Group" name="Create Ldap Group">
+    <Attributes>
+      <Map>
+        <entry key="hidden">
+          <value>
+            <Script>
+              <Source>import sailpoint.tools.Util;
+
+                      if(Util.isNotNullOrEmpty(ldapGroup) &amp;&amp; ldapGroup.equalsIgnoreCase("Create Ldap Group")){
+                      return false;
+                      }
+                      return true;</Source>
+            </Script>
+          </value>
+        </entry>
+      </Map>
+    </Attributes>
+    <Field displayName="Enter Group Name" name="ldapCreateGroup" type="string"/>
+    <Field displayName="Application Name" name="ldapAppName" type="Application"/>
+    <Field displayName="Ldap Group Description" name="groupDesc" type="string"/>
+  </Section>
+  <Button action="next" label="Next"/>
+  <Button action="cancel" label="Cancel"/>
+</Form>

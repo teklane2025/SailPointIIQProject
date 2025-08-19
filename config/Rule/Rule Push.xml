@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Rule PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Rule created="" id="" language="beanshell" modified="" name="Practice Question 3">
+  <Source>
+  // Write a rule to find all the users which are active in sailpoint and Display the user as lastname.firstname.
+  import sailpoint.object.Identity;
+  import java.util.ArrayList;
+  
+  List activeUsers = new ArrayList();
+  List users = context.getObjects(Identity.class);
+  for(Identity user: users){
+    if(!user.isInactive()){
+      activeUsers.add("Active user first name: "+user.getFirstname()+" ,Active user last name: " +user.getLastname());
+    }
+  }
+  return activeUsers;
+ 
+     </Source>
+</Rule>
