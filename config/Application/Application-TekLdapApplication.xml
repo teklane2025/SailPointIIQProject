@@ -31,7 +31,7 @@
       </entry>
       <entry key="nativeChangeDetectionOperations"/>
       <entry key="pageSize" value="100"/>
-      <entry key="password" value="1:ACP:C5zR85CQ1l8yresoVATCoTMslf0CjcAJqoUjllwRDQ8="/>
+      <entry key="password" value="1:ACP:agxRvlIdwPc27AbU8Ui0k3aBcH8Cp2dbEMy5XASId8E="/>
       <entry key="passwordAttr" value="userPassword"/>
       <entry key="port" value="10389"/>
       <entry key="searchDN" value="ou=tekusers,ou=system"/>
@@ -227,7 +227,7 @@
         <Description>object classes of the entity</Description>
       </AttributeDefinition>
     </Schema>
-    <Schema descriptionAttribute="" displayAttribute="cn" featuresString="PROVISIONING" identityAttribute="dn" instanceAttribute="" nativeObjectType="groupOfNames" objectType="group">
+    <Schema descriptionAttribute="" displayAttribute="cn" featuresString="PROVISIONING" identityAttribute="dn" instanceAttribute="" nativeObjectType="groupOfUniqueNames" objectType="group">
       <AttributeDefinition name="cn" type="string">
         <Description>common name(s) for which the entity is known by</Description>
       </AttributeDefinition>
@@ -248,7 +248,7 @@
       </AttributeDefinition>
       <Attributes>
         <Map>
-          <entry key="groupMemberAttribute" value="Member"/>
+          <entry key="groupMemberAttribute" value="uniqueMember"/>
         </Map>
       </Attributes>
     </Schema>
