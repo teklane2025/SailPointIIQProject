@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="TX Employee Database" profileClass="" type="JDBC">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Bud Employee Database" profileClass="" type="JDBC">
   <AccountCorrelationConfig>
-    <Reference class="sailpoint.object.CorrelationConfig" name="TX Employee Correlation"/>
+    <Reference class="sailpoint.object.CorrelationConfig" name="Bud Employee JDBC Correlation"/>
   </AccountCorrelationConfig>
   <Attributes>
     <Map>
-      <entry key="SQL" value="SELECT * FROM employee_record.employee;"/>
+      <entry key="SQL" value="SELECT * FROM bud_employee.employee;"/>
       <entry key="afterProvisioningRule"/>
       <entry key="aggregationMode">
         <value>
@@ -16,55 +16,55 @@
       <entry key="beforeProvisioningRule"/>
       <entry key="compositeDefinition"/>
       <entry key="deltaTable"/>
-      <entry key="department.SQL" value="SELECT * FROM employee_record.department;"/>
-      <entry key="department.aggregationMode">
+      <entry key="depart.SQL" value="SELECT * FROM bud_employee.depart;"/>
+      <entry key="depart.aggregationMode">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.deltaTable"/>
-      <entry key="department.driverClass" value="com.mysql.jdbc.Driver"/>
-      <entry key="department.getDeltaSQL"/>
-      <entry key="department.getDirectPermObjectSQL"/>
-      <entry key="department.getObjectSQL"/>
-      <entry key="department.isPermissionEnabled">
+      <entry key="depart.deltaTable"/>
+      <entry key="depart.driverClass" value="com.mysql.jdbc.Driver"/>
+      <entry key="depart.getDeltaSQL"/>
+      <entry key="depart.getDirectPermObjectSQL"/>
+      <entry key="depart.getObjectSQL"/>
+      <entry key="depart.isPermissionEnabled">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.mergeRows">
+      <entry key="depart.mergeRows">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.password" value="1:ACP:ma8KnUqBeS5VaeU4MEygjD98qsFuDiG+1pJ5cIrNEK8="/>
-      <entry key="department.url" value="jdbc:mysql://localhost/employee_record"/>
-      <entry key="department.useExecuteQuery">
+      <entry key="depart.password" value="1:ACP:Ukwxe/xaPx+Ha2FF2a3uTlTuw1hNES8s9xtiZLcKO6w="/>
+      <entry key="depart.url" value="jdbc:mysql://localhost/bud_employee"/>
+      <entry key="depart.useExecuteQuery">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.useStoredProcedureDelta">
+      <entry key="depart.useStoredProcedureDelta">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.useStoredProcedureDirectPermission">
+      <entry key="depart.useStoredProcedureDirectPermission">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.useStoredProcedureGetObject">
+      <entry key="depart.useStoredProcedureGetObject">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.useStoredProcedureSqlStmt">
+      <entry key="depart.useStoredProcedureSqlStmt">
         <value>
           <Boolean/>
         </value>
       </entry>
-      <entry key="department.user" value="root"/>
+      <entry key="depart.user" value="root"/>
       <entry key="driverClass" value="com.mysql.jdbc.Driver"/>
       <entry key="getDeltaSQL"/>
       <entry key="isPermissionEnabled">
@@ -91,7 +91,7 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="1:ACP:KFqs+VY5UM4zEnjs3wYXIuNnwEWdwJd2WTvlB3/uBIA="/>
+      <entry key="password" value="1:ACP:X8Dzi08FvpGfqP6vDvAL0li+l+nPseNfjr8jYk9L98E="/>
       <entry key="provisionRule" value="globalRule"/>
       <entry key="sysDescriptions">
         <value>
@@ -102,7 +102,7 @@
       </entry>
       <entry key="templateApplication" value="JDBC Template"/>
       <entry key="testConnSQL"/>
-      <entry key="url" value="jdbc:mysql://localhost/employee_record"/>
+      <entry key="url" value="jdbc:mysql://localhost/bud_employee"/>
       <entry key="useExecuteQuery">
         <value>
           <Boolean/>
@@ -145,7 +145,7 @@
     <Reference class="sailpoint.object.Identity" name="spadmin"/>
   </Owner>
   <Schemas>
-    <Schema displayAttribute="userName" identityAttribute="empId" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+    <Schema displayAttribute="firstName" identityAttribute="empId" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
       <AttributeDefinition name="empId" type="string">
         <Description/>
       </AttributeDefinition>
@@ -155,17 +155,14 @@
       <AttributeDefinition name="lastName" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="userName" type="string">
-        <Description/>
-      </AttributeDefinition>
       <AttributeDefinition name="email" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition entitlement="true" managed="true" multi="true" name="departId" schemaObjectType="department" type="string">
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="departId" schemaObjectType="depart" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
-    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="departName" identityAttribute="departId" instanceAttribute="" nativeObjectType="department" objectType="department" permissionsRemediationModificationType="None">
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="departName" identityAttribute="departId" instanceAttribute="" nativeObjectType="depart" objectType="depart" permissionsRemediationModificationType="None">
       <AttributeDefinition name="departId" type="string">
         <Description/>
       </AttributeDefinition>
