@@ -1,12 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="ABC Employee Database" profileClass="" type="JDBC">
-  <AccountCorrelationConfig>
-    <Reference class="sailpoint.object.CorrelationConfig" name="ABC Employee JDBC Correlation"/>
-  </AccountCorrelationConfig>
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="TekTestUsers Snowflake Application" profileClass="" type="JDBC">
   <Attributes>
     <Map>
-      <entry key="SQL" value="SELECT * FROM testdemo2.testtable2;"/>
+      <entry key="SQL" value="select * from IDENTIFIER('&quot;TEKTESTUSERS_SNOWFLAKE_DB&quot;.&quot;PUBLIC&quot;.&quot;TEKTEST_USERS&quot;') limit 100"/>
       <entry key="afterProvisioningRule"/>
       <entry key="aggregationMode">
         <value>
@@ -16,7 +13,7 @@
       <entry key="beforeProvisioningRule"/>
       <entry key="compositeDefinition"/>
       <entry key="deltaTable"/>
-      <entry key="driverClass" value="com.mysql.jdbc.Driver"/>
+      <entry key="driverClass" value="net.snowflake.client.jdbc.SnowflakeDriver"/>
       <entry key="getDeltaSQL"/>
       <entry key="isPermissionEnabled">
         <value>
@@ -42,8 +39,9 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="1:ACP:HxIu5Q6ciofUl//dgrEMBD75xQApIFJdhpWaqUJXtPE="/>
+      <entry key="password" value="1:ACP:FOsw0brT1X2zqfIfSxtsPkSdn2OPbO6HOcfSA1aNlAk="/>
       <entry key="provisionRule" value="globalRule"/>
+      <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
       <entry key="sysDescriptions">
         <value>
           <Map>
@@ -53,7 +51,7 @@
       </entry>
       <entry key="templateApplication" value="JDBC Template"/>
       <entry key="testConnSQL"/>
-      <entry key="url" value="jdbc:mysql://localhost/testdemo2"/>
+      <entry key="url" value="jdbc:snowflake://HNRIMCK-OUC72052.snowflakecomputing.com/?db=TEKTESTUSERS_SNOWFLAKE_DB"/>
       <entry key="useExecuteQuery">
         <value>
           <Boolean/>
@@ -89,30 +87,51 @@
           <Boolean/>
         </value>
       </entry>
-      <entry key="user" value="root"/>
+      <entry key="user" value="Ramesh2604"/>
     </Map>
   </Attributes>
   <Owner>
     <Reference class="sailpoint.object.Identity" name="spadmin"/>
   </Owner>
   <Schemas>
-    <Schema displayAttribute="firstname" identityAttribute="emid" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
-      <AttributeDefinition name="emid" type="string">
+    <Schema displayAttribute="FULLNAME" identityAttribute="EMPLOYEEID" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="EMPLOYEEID" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="firstname" type="string">
+      <AttributeDefinition name="FIRSTNAME" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="lastname" type="string">
+      <AttributeDefinition name="LASTNAME" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="email" type="string">
+      <AttributeDefinition name="MANAGERID" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="gender" type="string">
+      <AttributeDefinition name="FULLNAME" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition entitlement="true" managed="true" multi="true" name="department" type="string">
+      <AttributeDefinition name="EMAIL" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="DEPARTMENT" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="REGION" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LOCATION" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="INACTIVEIDENTITY" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="JOBTITLE" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="COSTCENTER" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="EMPLOYEETYPE" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>

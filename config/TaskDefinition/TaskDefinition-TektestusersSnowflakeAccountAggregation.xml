@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE TaskDefinition PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<TaskDefinition formPath="/monitor/tasks/accountAggregationTask.xhtml" name="EPL Snowflake Account Aggregation" resultAction="Delete" subType="task_item_type_acct_aggregation" type="AccountAggregation">
+<TaskDefinition formPath="/monitor/tasks/accountAggregationTask.xhtml" name="TekTestUSers Snowflake Account Aggregation" resultAction="Delete" subType="task_item_type_acct_aggregation" type="AccountAggregation">
   <Attributes>
     <Map>
       <entry key="TaskSchedule.host"/>
-      <entry key="applications" value="EPL Snowflake Application"/>
+      <entry key="applications" value="TekTestUsers Snowflake Application"/>
       <entry key="checkDeleted" value="true"/>
       <entry key="checkHistory" value="false"/>
       <entry key="checkPolicies" value="false"/>
