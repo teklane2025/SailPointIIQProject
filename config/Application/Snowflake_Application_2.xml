@@ -3,7 +3,7 @@
 <Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Snowflake Application 2" profileClass="spadmin" type="JDBC">
   <Attributes>
     <Map>
-      <entry key="SQL" value="select * from IDENTIFIER('&quot;SAILPOINT_USERS_DB&quot;.&quot;PUBLIC&quot;.&quot;SAILPOINT_EMPLOYEES&quot;') limit 100"/>
+      <entry key="SQL" value="%%Snowflake_Sandbox_SQL%%"/>
       <entry key="afterProvisioningRule"/>
       <entry key="aggregationMode">
         <value>
@@ -39,7 +39,7 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="1:ACP:Qls/j6HR9oWTzPrFerdjsZMqnDqU4DZ5+U6FI6Yg3bc="/>
+      <entry key="password" value="%%Snowflake_Sandbox_Password%%"/>
       <entry key="provisionRule" value="globalRule"/>
       <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
       <entry key="sysDescriptions">
@@ -51,7 +51,7 @@
       </entry>
       <entry key="templateApplication" value="JDBC Template"/>
       <entry key="testConnSQL"/>
-      <entry key="url" value="jdbc:snowflake://IBFLQRL-RCC02103.snowflakecomputing.com/?db=SAILPOINT_USERS_DB"/>
+      <entry key="url" value="%%Snowflake_Sandbox_DBURL%%"/>
       <entry key="useExecuteQuery">
         <value>
           <Boolean/>
@@ -87,7 +87,7 @@
           <Boolean/>
         </value>
       </entry>
-      <entry key="user" value="khimkunwar"/>
+      <entry key="user" value="%%Snowflake_Sandbox_Users%%"/>
     </Map>
   </Attributes>
   <Owner>
