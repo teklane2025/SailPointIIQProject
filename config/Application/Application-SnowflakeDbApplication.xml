@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Snowflake DB Application" profileClass="" type="JDBC">
+  <Attributes>
+    <Map>
+      <entry key="SQL" value="select * from IDENTIFIER('&quot;SAILPOINT_USERS&quot;.&quot;PUBLIC&quot;.&quot;SAILPOINT_EMP&quot;') limit 100"/>
+      <entry key="afterProvisioningRule"/>
+      <entry key="aggregationMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="compositeDefinition"/>
+      <entry key="deltaTable"/>
+      <entry key="driverClass" value="net.snowflake.client.jdbc.SnowflakeDriver"/>
+      <entry key="getDeltaSQL"/>
+      <entry key="isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="partitionMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="partitionStatements"/>
+      <entry key="password" value="1:ACP:cGzUU9BiyvpP8Gm1DQ8kC2CxOfOU9l8PM4lUHVbQqdw="/>
+      <entry key="provisionRule" value="globalRule"/>
+      <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="JDBC Template"/>
+      <entry key="testConnSQL"/>
+      <entry key="url" value="jdbc:snowflake://OQGHWZM-VXC06794.snowflakecomputing.com/?db=SAILPOINT_USERS"/>
+      <entry key="useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDelta">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDirectPermission">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureGetObject">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedurePartition">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureSqlStmt">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureTestConn">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="user" value="guptapreety597"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema displayAttribute="FULLNAME" identityAttribute="EMPLOYEEID" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="EMPLOYEEID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="FIRSTNAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LASTNAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="MANAGERID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="FULLNAME" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="EMAIL" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="DEPARTMENT" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="REGION" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="LOCATION" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="INACTIVEIDENTITY" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="JOBTITLE" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="COSTCENTER" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="EMPLOYEETYPE" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>
