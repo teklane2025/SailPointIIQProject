@@ -42,7 +42,7 @@
 <<<<<<< HEAD
       <entry key="password" value="1:ACP:ItIwsEEIsfuQKf5b0sDSZnDSZ66p0hgiNXzvSZdzKGw="/>
 =======
-      <entry key="password" value="%%Snowflake_QA_Password%%"/>
+      <entry key="password" value="%%Snowflake_Sandbox_Password%%"/>
 >>>>>>> 17b73a3323157655d209145075c18e2ca6d85b3d
       <entry key="provisionRule" value="globalRule"/>
       <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
@@ -58,7 +58,7 @@
 <<<<<<< HEAD
       <entry key="url" value="jdbc:snowflake://CZBQPPR-VFC27533.snowflakecomputing.com/?db=SAILPOINT_DATABASE"/>
 =======
-      <entry key="url" value="%%Snowflake_QA_DBURL%%"/>
+      <entry key="url" value="%%Snowflake_Sandbox_DBURL%%"/>
 >>>>>>> 17b73a3323157655d209145075c18e2ca6d85b3d
       <entry key="useExecuteQuery">
         <value>
@@ -95,7 +95,7 @@
           <Boolean/>
         </value>
       </entry>
-      <entry key="user" value="%%Snowflake_QA_User%%"/>
+      <entry key="user" value="%%Snowflake_Sandbox_User%%"/>
     </Map>
   </Attributes>
   <Owner>
