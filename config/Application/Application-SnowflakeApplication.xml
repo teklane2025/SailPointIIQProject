@@ -39,7 +39,7 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="1:ACP:9SuRjXKq+bhQi5ImIOH2LhNJz/+cYDDEK9O61IdtkIA="/>
+      <entry key="password" value="%%Snowflake_Password%%"/>
       <entry key="provisionRule" value="globalRule"/>
       <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
       <entry key="sysDescriptions">
@@ -51,7 +51,7 @@
       </entry>
       <entry key="templateApplication" value="JDBC Template"/>
       <entry key="testConnSQL"/>
-      <entry key="url" value="jdbc:snowflake://CZBQPPR-VFC27533.snowflakecomputing.com/?db=SNOWFLAKE"/>
+      <entry key="url" value="%%Snowflake_DBURL%%"/>
       <entry key="useExecuteQuery">
         <value>
           <Boolean/>
@@ -87,7 +87,7 @@
           <Boolean/>
         </value>
       </entry>
-      <entry key="user" value="KHUSBU67"/>
+      <entry key="user" value="%%Snowflake_User%%"/>
     </Map>
   </Attributes>
   <Owner>
