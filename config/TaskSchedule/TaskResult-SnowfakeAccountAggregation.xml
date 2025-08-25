@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1756112840743" completionStatus="Success" host="DESKTOP-V5SRT3L" launched="1756112837964" launcher="spadmin" name="Snowfake Account Aggregation" runLength="2" runLengthAverage="2" schedule="7012ab37b615450cb99c1e1eb8ffc379" type="AccountAggregation">
+  <Attributes>
+    <Map>
+      <entry key="applications" value="Snowflake Application"/>
+      <entry key="created" value="5"/>
+      <entry key="deleted" value="1"/>
+      <entry key="identityEntitlementsCreated" value="9"/>
+      <entry key="internalUpdates" value="1"/>
+      <entry key="managedAttributesCreated" value="2"/>
+      <entry key="total" value="5"/>
+    </Map>
+  </Attributes>
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="Snowfake Account Aggregation"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+</TaskResult>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1754411010158" completionStatus="Success" host="DESKTOP-V5SRT3L" launched="1754410938735" launcher="spadmin" name="Human resource account aggregation" runLength="71" runLengthAverage="10" runLengthDeviation="610" schedule="c0d39e1e3c9e4c3197377876165a05f4" type="AccountAggregation">
+  <Attributes>
+    <Map>
+      <entry key="applications" value="Human resource"/>
+      <entry key="created" value="177"/>
+      <entry key="identityEntitlementsCreated" value="250"/>
+      <entry key="identityEntitlementsUpdated" value="77"/>
+      <entry key="internalUpdates" value="3"/>
+      <entry key="managedAttributesCreated" value="5"/>
+      <entry key="optimized" value="1"/>
+      <entry key="reconnects" value="2"/>
+      <entry key="total" value="253"/>
+      <entry key="updated" value="75"/>
+    </Map>
+  </Attributes>
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="Human resource account aggregation"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+</TaskResult>
