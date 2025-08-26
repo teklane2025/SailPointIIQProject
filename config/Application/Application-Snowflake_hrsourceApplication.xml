@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Snowflake DB Application" profileClass="" type="JDBC">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Snowflake_HRSource Application" profileClass="" type="JDBC">
   <Attributes>
     <Map>
-      <entry key="SQL" value="select * from IDENTIFIER('&quot;SAILPOINT_USERS&quot;.&quot;PUBLIC&quot;.&quot;SAILPOINT_EMP&quot;') limit 100"/>
+      <entry key="SQL" value="select * from IDENTIFIER('&quot;SAILPOINT_USERS&quot;.&quot;PUBLIC&quot;.&quot;HRSOURCE&quot;') "/>
       <entry key="afterProvisioningRule"/>
       <entry key="aggregationMode">
         <value>
@@ -39,7 +39,7 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="1:ACP:wKnCVRv6AFytkqTeIiMfnP1SJkRt/yM+YZ8AVnz64k4="/>
+      <entry key="password" value="1:ACP:Dewp2jhyqQuGCAsZiipfjl5osWe8ETBmas+DXOMvjsc="/>
       <entry key="provisionRule" value="globalRule"/>
       <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
       <entry key="sysDescriptions">
