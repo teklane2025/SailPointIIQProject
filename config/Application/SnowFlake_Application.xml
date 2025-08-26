@@ -39,7 +39,7 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="%%SnowFlake_Password%%"/>
+      <entry key="password" value="%%SnowFlake_Sandbox_Password%%"/>
       <entry key="provisionRule" value="globalRule"/>
       <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
       <entry key="sysDescriptions">
@@ -51,7 +51,7 @@
       </entry>
       <entry key="templateApplication" value="JDBC Template"/>
       <entry key="testConnSQL"/>
-      <entry key="url" value="%%SnowFlake_DBURL%%"/>
+      <entry key="url" value="%%SnowFlake_Sandbox_DBURL%%"/>
       <entry key="useExecuteQuery">
         <value>
           <Boolean/>
@@ -87,7 +87,7 @@
           <Boolean/>
         </value>
       </entry>
-      <entry key="user" value="%%SnowFlake_User%%"/>
+      <entry key="user" value="%%SnowFlake_Sandbox_User%%"/>
     </Map>
   </Attributes>
   <Owner>
