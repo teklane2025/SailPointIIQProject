@@ -44,7 +44,7 @@
         </value>
       </entry>
       <entry key="partitionStatements"/>
-      <entry key="password" value="1:ACP:NaU1Z2UpWvsuI9GA7YvjDeCZ62/7P7gVbHSIdmocR1HoUHJajkqcbiKRm6jX0dj4"/>
+      <entry key="password" value="SAILPOINT_SANDBOX_PASSWORD"/>
       <entry key="provisionRule" value="globalRule"/>
       <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
       <entry key="sysDescriptions">
@@ -56,7 +56,7 @@
       </entry>
       <entry key="templateApplication" value="JDBC Template"/>
       <entry key="testConnSQL"/>
-      <entry key="url" value="jdbc:snowflake://NZCNDAB-PXC34522.snowflakecomputing.com/?db=SAILPOINT_DB_USER"/>
+      <entry key="url" value="SAILPOINT_SANDBOX_URL"/>
       <entry key="useExecuteQuery">
         <value>
           <Boolean/>
@@ -92,7 +92,7 @@
           <Boolean/>
         </value>
       </entry>
-      <entry key="user" value="Kundan1999"/>
+      <entry key="user" value="SAILPOINT_SANDBOX_USERNAME"/>
     </Map>
   </Attributes>
   <Owner>
