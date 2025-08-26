@@ -1,15 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-
-<Application authoritative="true" connector="sailpoint.connector.DelimitedFileConnector" featuresString="DIRECT_PERMISSIONS, NO_RANDOM_ACCESS, DISCOVER_SCHEMA" icon="enterpriseIcon" name="Human Resource" profileClass="" type="DelimitedFile">
-
+<Application connector="sailpoint.connector.DelimitedFileConnector" featuresString="DIRECT_PERMISSIONS, NO_RANDOM_ACCESS, DISCOVER_SCHEMA" icon="enterpriseIcon" name="Employee Data" profileClass="" type="DelimitedFile">
   <Attributes>
     <Map>
       <entry key="afterProvisioningRule"/>
       <entry key="beforeProvisioningRule"/>
       <entry key="compositeDefinition"/>
       <entry key="delimiter" value=","/>
-      <entry key="file" value="C:\HRMSRecord.txt"/>
+      <entry key="file" value="C:\Emp_new_data21.csv"/>
       <entry key="filetransport" value="local"/>
       <entry key="filterEmptyRecords">
         <value>
@@ -40,7 +38,7 @@
       </entry>
       <entry key="managerCorrelationFilter">
         <value>
-          <Filter operation="EQ" property="Empid" value="managerid"/>
+          <Filter operation="EQ" property="Empid" value="Manager"/>
         </value>
       </entry>
       <entry key="mergeRows">
@@ -71,49 +69,53 @@
         </value>
       </entry>
       <entry key="templateApplication" value="DelimitedFile Template"/>
-
-      <entry key="transportUserPassword" value="1:ACP:PL6MwcoDnc90lL+YKGU/x6U+MKrgifFq8CPg3iz+uXc="/>
     </Map>
   </Attributes>
   <Owner>
     <Reference class="sailpoint.object.Identity" name="spadmin"/>
   </Owner>
   <Schemas>
-    <Schema displayAttribute="username" identityAttribute="Empid" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
-      <AttributeDefinition name="Empid" type="string">
+    <Schema displayAttribute="First Name" identityAttribute="Employee ID" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="Employee ID" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="username" type="string">
+      <AttributeDefinition name="First Name" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="firstname" type="string">
+      <AttributeDefinition name="Last Name" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="lastname" type="string">
+      <AttributeDefinition name="Manager" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="gender" type="string">
+      <AttributeDefinition name="Company Name" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="email" type="string">
+      <AttributeDefinition name="Address" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="City" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="State" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Phone No" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Email" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Status" type="string">
         <Description/>
       </AttributeDefinition>
       <AttributeDefinition entitlement="true" managed="true" multi="true" name="department" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="managerid" type="string">
+      <AttributeDefinition name="Empty" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="status" type="string">
-        <Description/>
-      </AttributeDefinition>
-      <AttributeDefinition name="Transaction Type" type="string">
-        <Description/>
-      </AttributeDefinition>
-      <AttributeDefinition name="dob" type="string">
-        <Description/>
-      </AttributeDefinition>
-      <AttributeDefinition name="ainNumber  account attribute" type="string">
+      <AttributeDefinition name="place" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
