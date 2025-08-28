@@ -14,10 +14,10 @@
       <entry key="deltaAggregation" value="false"/>
       <entry key="enablePartitioning" value="false"/>
       <entry key="haltOnMaxError" value="false"/>
-      <entry key="noAutoCreateApplications" value="true"/>
+      <entry key="noAutoCreateApplications" value="false"/>
       <entry key="noAutoCreateScopes" value="false"/>
       <entry key="noNeedsRefresh" value="false"/>
-      <entry key="noOptimizeReaggregation" value="false"/>
+      <entry key="noOptimizeReaggregation" value="true"/>
       <entry key="promoteManagedAttributes" value="true"/>
       <entry key="refreshScorecard" value="false"/>
       <entry key="sequential" value="false"/>

@@ -85,10 +85,11 @@
               <entry key="resMappingObj">
                 <value>
                   <Map>
-                    <entry key="email" value="email"/>
+                    <entry key="company.address.city" value="company.address.city"/>
                     <entry key="firstName" value="firstName"/>
                     <entry key="id" value="id"/>
                     <entry key="lastName" value="lastName"/>
+                    <entry key="role" value="role"/>
                   </Map>
                 </value>
               </entry>
@@ -153,6 +154,55 @@
               <entry key="uniqueNameForEndPoint" value="Group Aggregation"/>
               <entry key="xpathNamespaces"/>
             </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/carts?limit=0"/>
+              <entry key="header"/>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Group Aggregation-cart"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="id" value="id"/>
+                    <entry key="products.id" value="products[*].id"/>
+                    <entry key="products.title" value="products[*].title"/>
+                    <entry key="userId" value="userId"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>200</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.carts[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="4"/>
+              <entry key="uniqueNameForEndPoint" value="Group Aggregation-cart"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
           </List>
         </value>
       </entry>
@@ -196,7 +246,7 @@
           </Map>
         </value>
       </entry>
-      <entry key="password" value="1:ACP:QSuiy+MxRoXa6BfoUPSPBghRhwoIsReBeXTZxwgA8qs="/>
+      <entry key="password" value="1:ACP:IuSFee/KcnTQ++/fDKtHBNW9zhTm2pRz1cM7p+9c7m0="/>
       <entry key="private_key_to_update"/>
       <entry key="sysDescriptions">
         <value>
@@ -229,7 +279,24 @@
       <AttributeDefinition name="lastName" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="email" type="string">
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="role" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="company.address.city" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="" identityAttribute="id" instanceAttribute="" nativeObjectType="" objectType="cart">
+      <AttributeDefinition name="id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="products.id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="products.title" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="userId" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
