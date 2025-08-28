@@ -105,9 +105,12 @@
               <entry key="resMappingObj">
                 <value>
                   <Map>
+                    <entry key="company.address.city"/>
                     <entry key="firstName" value="firstName"/>
+                    <entry key="hair.color"/>
                     <entry key="id" value="id"/>
                     <entry key="lastName" value="lastName"/>
+                    <entry key="role" value="role"/>
                   </Map>
                 </value>
               </entry>
@@ -155,6 +158,7 @@
                   <Map>
                     <entry key="description" value="description"/>
                     <entry key="id" value="id"/>
+                    <entry key="price" value="price"/>
                     <entry key="title" value="title"/>
                   </Map>
                 </value>
@@ -169,6 +173,58 @@
               <entry key="rootPath" value="$.products[*]"/>
               <entry key="sequenceNumberForEndpoint" value="3"/>
               <entry key="uniqueNameForEndPoint" value="Group Aggregation"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/carts?limit=0"/>
+              <entry key="header"/>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Group Aggregation-groupcart"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="cartId" value="id"/>
+                    <entry key="productsId" value="products[*].id"/>
+                    <entry key="productsPrice" value="products[*].price"/>
+                    <entry key="productsQuantity" value="products[*].quantity"/>
+                    <entry key="productsTitle" value="products[*].title"/>
+                    <entry key="productsTotal" value="products[*].total"/>
+                    <entry key="userId" value="userId"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>200</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.carts[*]&#xd;&#xa;"/>
+              <entry key="sequenceNumberForEndpoint" value="4"/>
+              <entry key="uniqueNameForEndPoint" value="Group cart Aggregation"/>
               <entry key="xpathNamespaces"/>
             </Map>
           </List>
@@ -214,7 +270,7 @@
           </Map>
         </value>
       </entry>
-      <entry key="password" value="1:ACP:Bf9RDrTpFNMNXYuuV4FvKCHmfTfttI+sQuobNmcpUrM="/>
+      <entry key="password" value="1:ACP:twoR5pHNcRiokzyRU2n+jOJnoevumfaE7W2dnxdMCTw="/>
       <entry key="private_key_to_update"/>
       <entry key="sysDescriptions">
         <value>
@@ -247,7 +303,36 @@
       <AttributeDefinition name="lastName" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition entitlement="true" managed="true" multi="true" name="role" type="string">
+      <AttributeDefinition name="role" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="hair.color" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="company.address.city" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="price" identityAttribute="cartId" instanceAttribute="" nativeObjectType="groupcart" objectType="groupcart">
+      <AttributeDefinition name="cartId" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="productsId" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="productsPrice" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="productsTitle" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="userId" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="productsQuantity" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="productsTotal" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
@@ -259,6 +344,12 @@
         <Description/>
       </AttributeDefinition>
       <AttributeDefinition name="title" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="price" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="userid" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
