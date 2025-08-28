@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
-<Application connector="sailpoint.connector.webservices.WebServicesConnector" featuresString="PROVISIONING, ENABLE, PASSWORD, AUTHENTICATE" name="Dummy API Application" profileClass="" type="Web Services">
+<Application connector="sailpoint.connector.webservices.WebServicesConnector" featuresString="PROVISIONING, ENABLE, PASSWORD, AUTHENTICATE" name="Test API Appilcation" profileClass="" type="Web Services">
   <Attributes>
     <Map>
       <entry key="afterProvisioningRule"/>
@@ -43,13 +43,6 @@
                 </value>
               </entry>
               <entry key="resMappingObj"/>
-              <entry key="responseCode">
-                <value>
-                  <List>
-                    <String>200</String>
-                  </List>
-                </value>
-              </entry>
               <entry key="rootPath"/>
               <entry key="sequenceNumberForEndpoint" value="1"/>
               <entry key="uniqueNameForEndPoint" value="Test Connection"/>
@@ -85,9 +78,14 @@
               <entry key="resMappingObj">
                 <value>
                   <Map>
-                    <entry key="firstName" value="firstName"/>
-                    <entry key="id" value="id"/>
-                    <entry key="lastName" value="lastName"/>
+                    <entry key="CompanyCity" value="company.address.city"/>
+                    <entry key="CompanyDepartment" value="company.department"/>
+                    <entry key="FirstName" value="firstName"/>
+                    <entry key="HairColor" value="hair.color"/>
+                    <entry key="ID" value="id"/>
+                    <entry key="LastName" value="lastName"/>
+                    <entry key="Role" value="role"/>
+                    <entry key="University" value="university"/>
                   </Map>
                 </value>
               </entry>
@@ -133,10 +131,11 @@
               <entry key="resMappingObj">
                 <value>
                   <Map>
-                    <entry key="category" value="category"/>
-                    <entry key="description" value="description"/>
-                    <entry key="id" value="id"/>
-                    <entry key="title" value="title"/>
+                    <entry key="Category" value="category"/>
+                    <entry key="Description" value="description"/>
+                    <entry key="ProductID" value="id"/>
+                    <entry key="Rating" value="rating"/>
+                    <entry key="Title" value="title"/>
                   </Map>
                 </value>
               </entry>
@@ -149,7 +148,56 @@
               </entry>
               <entry key="rootPath" value="$.products[*]"/>
               <entry key="sequenceNumberForEndpoint" value="3"/>
-              <entry key="uniqueNameForEndPoint" value="Group Aggregation"/>
+              <entry key="uniqueNameForEndPoint" value="Product Group Aggregation"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/carts?limit=0"/>
+              <entry key="header"/>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Group Aggregation-Cart"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="CartID" value="id"/>
+                    <entry key="ProductID" value="products[*].id"/>
+                    <entry key="ProductTitle" value="products[*].title"/>
+                    <entry key="UserID" value="userId"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>200</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.carts[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="4"/>
+              <entry key="uniqueNameForEndPoint" value="Cart Group Aggregation"/>
               <entry key="xpathNamespaces"/>
             </Map>
           </List>
@@ -195,7 +243,7 @@
           </Map>
         </value>
       </entry>
-      <entry key="password" value="1:ACP:s6gY5u7b6wEiB4G9t5b6XOAr2Qv8zO+nGR+3FwOjkiU="/>
+      <entry key="password" value="1:ACP:gg4z/uhP73NnC3w8jD/cqXEOmluoSPCInTLlFQFbt8U="/>
       <entry key="private_key_to_update"/>
       <entry key="sysDescriptions">
         <value>
@@ -218,28 +266,60 @@
     <Reference class="sailpoint.object.Identity" name="spadmin"/>
   </Owner>
   <Schemas>
-    <Schema displayAttribute="" groupAttribute="" identityAttribute="id" instanceAttribute="" nativeObjectType="user" objectType="account">
-      <AttributeDefinition name="id" type="string">
+    <Schema displayAttribute="FirstName" groupAttribute="" identityAttribute="ID" instanceAttribute="" nativeObjectType="user" objectType="account">
+      <AttributeDefinition name="ID" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="firstName" type="string">
+      <AttributeDefinition name="FirstName" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="lastName" type="string">
+      <AttributeDefinition name="LastName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="HairColor" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="CompanyDepartment" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="CompanyCity" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="University" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="Role" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
-    <Schema descriptionAttribute="" displayAttribute="" identityAttribute="id" instanceAttribute="" nativeObjectType="group" objectType="group">
-      <AttributeDefinition name="id" type="string">
+    <Schema descriptionAttribute="" displayAttribute="Title" identityAttribute="ProductID" instanceAttribute="" nativeObjectType="group" objectType="group">
+      <AttributeDefinition name="ProductID" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="title" type="string">
+      <AttributeDefinition name="Description" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="description" type="string">
+      <AttributeDefinition entitlement="true" indexed="true" name="Category" type="string">
         <Description/>
       </AttributeDefinition>
-      <AttributeDefinition name="category" type="string">
+      <AttributeDefinition name="Rating" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="Title" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="" identityAttribute="CartID" instanceAttribute="" nativeObjectType="" objectType="Cart">
+      <AttributeDefinition name="CartID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ProductID" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ProductTitle" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="UserID" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
