@@ -89,6 +89,7 @@
                     <entry key="id" value="id"/>
                     <entry key="lastName" value="lastName"/>
                     <entry key="maidenName" value="maidenName"/>
+                    <entry key="role" value="role"/>
                   </Map>
                 </value>
               </entry>
@@ -153,6 +154,56 @@
               <entry key="uniqueNameForEndPoint" value="Group Aggregation"/>
               <entry key="xpathNamespaces"/>
             </Map>
+            <Map>
+              <entry key="afterRule"/>
+              <entry key="beforeRule"/>
+              <entry key="body">
+                <value>
+                  <Map>
+                    <entry key="bodyFormData"/>
+                    <entry key="bodyFormat" value="raw"/>
+                    <entry key="jsonBody"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="contextUrl" value="/carts?limit=0"/>
+              <entry key="header"/>
+              <entry key="httpMethodType" value="GET"/>
+              <entry key="operationType" value="Group Aggregation-carts"/>
+              <entry key="paginationSteps"/>
+              <entry key="pagingInitialOffset">
+                <value>
+                  <Integer>0</Integer>
+                </value>
+              </entry>
+              <entry key="pagingSize">
+                <value>
+                  <Integer>50</Integer>
+                </value>
+              </entry>
+              <entry key="resMappingObj">
+                <value>
+                  <Map>
+                    <entry key="id" value="id"/>
+                    <entry key="products.id" value="products[*].id"/>
+                    <entry key="products.price" value="products[*].price"/>
+                    <entry key="products.title" value="products[*].title"/>
+                    <entry key="userId" value="userId"/>
+                  </Map>
+                </value>
+              </entry>
+              <entry key="responseCode">
+                <value>
+                  <List>
+                    <String>200</String>
+                  </List>
+                </value>
+              </entry>
+              <entry key="rootPath" value="$.carts[*]"/>
+              <entry key="sequenceNumberForEndpoint" value="4"/>
+              <entry key="uniqueNameForEndPoint" value="Cart Aggregation"/>
+              <entry key="xpathNamespaces"/>
+            </Map>
           </List>
         </value>
       </entry>
@@ -196,7 +247,7 @@
           </Map>
         </value>
       </entry>
-      <entry key="password" value="1:ACP:lLOEvpbZzaFHiSVOHAcOo34QeWNc3NIhPlKRM1YSnDw="/>
+      <entry key="password" value="1:ACP:wdkGE/0psOKNaf1taWRRXvEdkztka86H53raFD1yx7c="/>
       <entry key="private_key_to_update"/>
       <entry key="sysDescriptions">
         <value>
@@ -230,6 +281,26 @@
         <Description/>
       </AttributeDefinition>
       <AttributeDefinition name="maidenName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="role" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="products.title" identityAttribute="id" instanceAttribute="" nativeObjectType="carts" objectType="carts">
+      <AttributeDefinition name="id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="products.id" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="products.title" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="products.price" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="userId" type="string">
         <Description/>
       </AttributeDefinition>
     </Schema>
