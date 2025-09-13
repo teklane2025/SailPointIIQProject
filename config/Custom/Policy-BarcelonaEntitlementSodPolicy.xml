@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Policy PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Policy certificationActions="Remediated,Mitigated,Delegated" configPage="entitlementPolicy.xhtml" executor="sailpoint.policy.EntitlementSODPolicyExecutor" name="Barcelona Entitlement SOD Policy" state="Active" type="EntitlementSOD" typeKey="policy_type_entitlement_sod" violationOwnerType="Manager">
+  <PolicyAlert disabled="true" escalationStyle="none"/>
+  <Attributes>
+    <Map>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <GenericConstraints>
+    <GenericConstraint name="new rule" violationOwnerType="None">
+      <CompensatingControl>If a user has an players entitlement, he/she should not be given HR entitlement &amp; vice-versa.</CompensatingControl>
+      <RemediationAdvice>Please remove one of the entitlement.</RemediationAdvice>
+      <IdentitySelector>
+        <MatchExpression>
+          <MatchTerm name="groups" type="Entitlement" value="cn=players,ou=barcaGroups,ou=system">
+            <ApplicationRef>
+              <Reference class="sailpoint.object.Application" name="Barcelona Employee LDAP Application"/>
+            </ApplicationRef>
+          </MatchTerm>
+        </MatchExpression>
+      </IdentitySelector>
+      <IdentitySelector>
+        <MatchExpression>
+          <MatchTerm name="department" type="Entitlement" value="HR">
+            <ApplicationRef>
+              <Reference class="sailpoint.object.Application" name="ABC Employee Database"/>
+            </ApplicationRef>
+          </MatchTerm>
+        </MatchExpression>
+      </IdentitySelector>
+    </GenericConstraint>
+  </GenericConstraints>
+</Policy>
