@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Snowflake Application" profileClass="" type="JDBC">
+  <Attributes>
+    <Map>
+      <entry key="SQL" value="SHOW USERS;"/>
+      <entry key="afterProvisioningRule"/>
+      <entry key="aggregationMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="compositeDefinition"/>
+      <entry key="deltaTable"/>
+      <entry key="driverClass" value="net.snowflake.client.jdbc.SnowflakeDriver"/>
+      <entry key="getDeltaSQL"/>
+      <entry key="isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="partitionMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="partitionStatements"/>
+      <entry key="password" value="1:ACP:hmGSLIMmBXOZbAaz5vSgHh+NC2vX/HOz+7A1lIamOag="/>
+      <entry key="provisionRule" value="globalRule"/>
+      <entry key="resultSetType" value="TYPE_FORWARD_ONLY"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="JDBC Template"/>
+      <entry key="testConnSQL"/>
+      <entry key="url" value="jdbc:snowflake://OQGHWZM-VXC06794.snowflakecomputing.com/?db=SNOWFLAKE"/>
+      <entry key="useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDelta">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDirectPermission">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureGetObject">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedurePartition">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureSqlStmt">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureTestConn">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="user" value="guptapreety597"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema displayAttribute="display_name" identityAttribute="login_name" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="created_on" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="login_name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="display_name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="first_name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="last_name" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="email" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="mins_to_unlock" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="days_to_expiry" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="comment" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="disabled" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="must_change_password" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="snowflake_lock" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="default_warehouse" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="default_namespace" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition entitlement="true" managed="true" multi="true" name="default_role" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="default_secondary_roles" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ext_authn_duo" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="ext_authn_uid" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="mins_to_bypass_mfa" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="owner" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="last_success_login" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="expires_at_time" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="locked_until_time" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="has_password" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="has_rsa_public_key" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="type" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="has_mfa" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="has_pat" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="has_workload_identity" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="is_from_organization_user" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>
