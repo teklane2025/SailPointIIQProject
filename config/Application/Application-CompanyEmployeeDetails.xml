@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Application PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Application connector="sailpoint.connector.JDBCConnector" featuresString="DISCOVER_SCHEMA, PROVISIONING, SYNC_PROVISIONING, DIRECT_PERMISSIONS, SEARCH, ENABLE, UNLOCK" icon="databaseIcon" name="Company Employee Details" profileClass="spadmin" type="JDBC">
+  <Attributes>
+    <Map>
+      <entry key="SQL" value="SELECT * FROM employeedata.emp_new_data21;"/>
+      <entry key="afterProvisioningRule"/>
+      <entry key="aggregationMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="beforeProvisioningRule"/>
+      <entry key="compositeDefinition"/>
+      <entry key="deltaTable"/>
+      <entry key="department.SQL" value="SELECT * FROM employeedata.department;"/>
+      <entry key="department.aggregationMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.deltaTable"/>
+      <entry key="department.driverClass" value="com.mysql.jdbc.Driver"/>
+      <entry key="department.getDeltaSQL"/>
+      <entry key="department.getDirectPermObjectSQL"/>
+      <entry key="department.getObjectSQL"/>
+      <entry key="department.isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.password" value="1:ACP:bd7GS8Ydujb6hEZG1GoewmmaVS2zQmhNFjCNgcbjS0M="/>
+      <entry key="department.url" value="jdbc:mysql://localhost/employeedata"/>
+      <entry key="department.useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.useStoredProcedureDelta">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.useStoredProcedureDirectPermission">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.useStoredProcedureGetObject">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.useStoredProcedureSqlStmt">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="department.user" value="root"/>
+      <entry key="driverClass" value="com.mysql.jdbc.Driver"/>
+      <entry key="getDeltaSQL"/>
+      <entry key="isPermissionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="mergeRows">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionAttributeScope" value="entitlements"/>
+      <entry key="nativeChangeDetectionAttributes"/>
+      <entry key="nativeChangeDetectionEnabled">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="nativeChangeDetectionOperations"/>
+      <entry key="partitionMode">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="partitionStatements"/>
+      <entry key="password" value="1:ACP:T5VRV5u7KwEs1HDP6raRmAgyLtXol1vZhGODbyw6Dig="/>
+      <entry key="provisionRule" value="globalRule"/>
+      <entry key="sysDescriptions">
+        <value>
+          <Map>
+            <entry key="en_US"/>
+          </Map>
+        </value>
+      </entry>
+      <entry key="templateApplication" value="JDBC Template"/>
+      <entry key="testConnSQL"/>
+      <entry key="url" value="jdbc:mysql://localhost/employeedata"/>
+      <entry key="useExecuteQuery">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDelta">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureDirectPermission">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureGetObject">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedurePartition">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureSqlStmt">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="useStoredProcedureTestConn">
+        <value>
+          <Boolean/>
+        </value>
+      </entry>
+      <entry key="user" value="root"/>
+    </Map>
+  </Attributes>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+  <Schemas>
+    <Schema displayAttribute="username" identityAttribute="EmpId" instanceAttribute="" nativeObjectType="account" objectType="account" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="EmpId" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="fName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="lName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="empName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="email" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="username" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="departmentId" schemaObjectType="department" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+    <Schema aggregationType="group" descriptionAttribute="" displayAttribute="departmentName" identityAttribute="departmentId" instanceAttribute="" nativeObjectType="department" objectType="department" permissionsRemediationModificationType="None">
+      <AttributeDefinition name="departmentId" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="departmentName" type="string">
+        <Description/>
+      </AttributeDefinition>
+      <AttributeDefinition name="departmentBuilding" type="string">
+        <Description/>
+      </AttributeDefinition>
+    </Schema>
+  </Schemas>
+  <ApplicationScorecard/>
+</Application>

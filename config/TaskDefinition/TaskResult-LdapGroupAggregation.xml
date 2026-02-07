@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1755503794661" completionStatus="Success" host="DESKTOP-V5SRT3L" launched="1755503793547" launcher="spadmin" name="LDAP group aggregation" runLength="1" runLengthAverage="1" schedule="3b1903e0261e4d3e8b18b26a4b0f7a98" type="AccountGroupAggregation">
+  <Attributes>
+    <Map>
+      <entry key="applications" value="LDAP Application"/>
+      <entry key="groupDetails">
+        <value>
+          <List>
+            <TaskStatistics name="LDAP Application">
+              <TaskStatistics name="group">
+                <TaskStatistic data="1" name="task_out_account_group_aggregation_application_object_total"/>
+                <TaskStatistic data="1" name="task_out_account_group_aggregation_application_object_created"/>
+              </TaskStatistics>
+            </TaskStatistics>
+          </List>
+        </value>
+      </entry>
+      <entry key="groupsCreated" value="1"/>
+      <entry key="internalUpdates" value="1"/>
+      <entry key="total" value="1"/>
+    </Map>
+  </Attributes>
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="LDAP group aggregation"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+</TaskResult>

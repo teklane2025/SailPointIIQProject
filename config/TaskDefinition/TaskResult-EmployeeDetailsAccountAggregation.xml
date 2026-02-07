@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE TaskResult PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<TaskResult completed="1754451987074" completionStatus="Success" host="DESKTOP-V5SRT3L" launched="1754451984226" launcher="spadmin" name="Employee details account aggregation" runLength="2" runLengthAverage="1" runLengthDeviation="100" schedule="f636946619614a3f8b4c6a0a7009803f" type="AccountAggregation">
+  <Attributes>
+    <Map>
+      <entry key="applications" value="Employee Details"/>
+      <entry key="identityEntitlementsCreated" value="9"/>
+      <entry key="internalUpdates" value="1"/>
+      <entry key="managedAttributesCreated" value="3"/>
+      <entry key="total" value="9"/>
+      <entry key="updated" value="9"/>
+    </Map>
+  </Attributes>
+  <Definition>
+    <Reference class="sailpoint.object.TaskDefinition" name="Employee details account aggregation"/>
+  </Definition>
+  <Owner>
+    <Reference class="sailpoint.object.Identity" name="spadmin"/>
+  </Owner>
+</TaskResult>
